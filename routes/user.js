@@ -1,86 +1,104 @@
-exports.signup = function (req, res) {
-  message = '';
-  if (req.method == 'POST') {
-    // post data
 
-  } else {
-    res.render('signup');
-  }
+exports.signup = function(req, res){
+   message = '';
+   if(req.method == "POST"){
+      var post  = req.body;
+      var name= post.user_name;
+      var pass= post.password;
+      var fname= post.first_name;
+      var lname= post.last_name;
+      var mob= post.mob_no;
+
+      var sql = "INSERT INTO `users`(`first_name`,`last_name`,`mob_no`,`user_name`, `password`) VALUES ('" + fname + "','" + lname + "','" + mob + "','" + name + "','" + pass + "')";
+
+      var query = db.query(sql, function(err, result) {
+
+         message = "Félicitation ! Vous avez votre compte !";
+         res.render('signup.ejs',{message: message});
+      });
+
+   } else {
+      res.render('signup');
+   }
+};
+ 
+//-----------------------------------------------login page call------------------------------------------------------
+exports.login = function(req, res){
+   var message = '';
+   var sess = req.session; 
+
+   if(req.method == "POST"){
+      var post  = req.body;
+      var name= post.user_name;
+      var pass= post.password;
+     
+      var sql="SELECT id, first_name, last_name, user_name FROM `users` WHERE `user_name`='"+name+"' and password = '"+pass+"'";                           
+      db.query(sql, function(err, results){      
+         if(results.length){
+            req.session.userId = results[0].id;
+            req.session.user = results[0];
+            console.log(results[0].id);
+            res.redirect('/home/dashboard');
+         }
+         else{
+            message = 'Erreur de login';
+            res.render('index.ejs',{message: message});
+         }
+                 
+      });
+   } else {
+      res.render('index.ejs',{message: message});
+   }
+           
 };
 
-exports.login = function (req, res) {
-  let message = '';
-  const sess = req.session;
+           
+exports.dashboard = function(req, res, next){
+           
+   var user =  req.session.user,
+   userId = req.session.userId;
+   console.log('ddd='+userId);
+   if(userId == null){
+      res.redirect("/login");
+      return;
+   }
 
-  if (req.method == 'POST') {
-    const post = req.body;
-    const name = post.user_name;
-    const pass = post.password;
+   var sql="SELECT * FROM `users` WHERE `id`='"+userId+"'";
 
-    console.log(name);
-    console.log(pass);
-
-    const sql = `SELECT id, first_name, last_name, user_name FROM \`users\` WHERE \`user_name\`='${name}' and \`password\` = '${pass}'`;
-    console.log(sql);
-    db.query(sql, (err, results) => {
-      console.log(results);
-      if (results.length) {
-        req.session.userId = results[0].id;
-        req.session.user = results[0];
-        console.log(results[0].id);
-        res.redirect('/home/dashboard');
-      }
-      else {
-        message = 'Erreur de connexion';
-        res.render('index.ejs', { message });
-      }
-
-    });
-  } else {
-    res.render('index.ejs', { message });
-  }
+   db.query(sql, function(err, results){
+      res.render('dashboard.ejs', {user:user});    
+   });       
 };
-
-exports.signup = function (req, res) {
-  message = '';
-  if (req.method == 'POST') {
-    const post = req.body;
-    const name = post.user_name;
-    const pass = post.password;
-    const fname = post.first_name;
-    const lname = post.last_name;
-    const mob = post.mob_no;
-
-    const sql = `INSERT INTO \`users\`(\`first_name\`,\`last_name\`,\`mob_no\`,\`user_name\`, \`password\`) VALUES ('${fname}','${lname}','${mob}','${name}','${pass}')`;
-
-    const query = db.query(sql, (err, result) => {
-
-      message = 'Succesfully! Your account has been created.';
-      res.render('signup.ejs', { message });
-    });
-
-  } else {
-    res.render('signup');
-  }
+//------------------------------------logout functionality----------------------------------------------
+exports.logout=function(req,res){
+   req.session.destroy(function(err) {
+      res.redirect("/login");
+   })
 };
+//--------------------------------render user details after login--------------------------------
+exports.profile = function(req, res){
 
-exports.dashboard = function (req, res, next) {
+   var userId = req.session.userId;
+   if(userId == null){
+      res.redirect("/login");
+      return;
+   }
 
-  let user = req.session.user,
-    userId = req.session.userId;
+   var sql="SELECT * FROM `users` WHERE `id`='"+userId+"'";          
+   db.query(sql, function(err, result){  
+      res.render('profile.ejs',{data:result});
+   });
+};
+//---------------------------------edit users details after login----------------------------------
+exports.editprofile=function(req,res){
+   var userId = req.session.userId;
+   if(userId == null){
+      res.redirect("/login");
+      return;
+   }
 
-  if (userId == null) {
-    res.redirect('/home/login');
-    return;
-  }
-
-  const sql = `SELECT * FROM \`login_details\` WHERE \`id\`='${userId}'`;
-
-	   db.query(sql, (err, results) => {
-
-		   console.log(results);
-
-		   res.render('profile.ejs', { user });
-
-  });
+   var sql="SELECT * FROM `users` WHERE `id`='"+userId+"'";
+   db.query(sql, function(err, results){
+      res.render('edit_profile.ejs',{data:results});
+   });
 };
