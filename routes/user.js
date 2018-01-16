@@ -66,7 +66,7 @@ exports.dashboard = function(req, res, next){
    var sql="SELECT * FROM `users` WHERE `id`='"+userId+"'";
 
    db.query(sql, function(err, results){
-      res.render('dashboard.ejs', {user:user});    
+      res.render('dashboard.ejs', {user:user});
    });       
 };
 //------------------------------------logout functionality----------------------------------------------
@@ -83,11 +83,28 @@ exports.profile = function(req, res){
       res.redirect("/login");
       return;
    }
+   const gamertag = req.session.user.first_name;
+   const platform = req.session.user.last_name;
 
-   var sql="SELECT * FROM `users` WHERE `id`='"+userId+"'";          
-   db.query(sql, function(err, result){  
-      res.render('profile.ejs',{data:result});
+   var request = require("request");
+
+   var options = { method: 'GET',
+     url: 'https://api.fortnitetracker.com/v1/profile/'+platform+'/'+gamertag+'',
+     headers: 
+      { 'Postman-Token': 'e8c03bd2-9479-4bc8-1ea1-20de5981caf7',
+        'Cache-Control': 'no-cache',
+        'TRN-Api-Key': 'ff3f7f16-c33f-4281-8c39-6f4a0c705ac2' } };
+   
+   request(options, function (error, response, body) {
+     if (error) throw new Error(error);
+    const dataGamer = JSON.parse(body);
+    console.log(dataGamer.stats.p9.top1.value);
+     var sql="SELECT * FROM `users` WHERE `id`='"+userId+"'";          
+     db.query(sql, function(err, result){  
+        res.render('profile.ejs',{data:result,dataGamer});
+     });
    });
+
 };
 //---------------------------------edit users details after login----------------------------------
 exports.editprofile=function(req,res){
