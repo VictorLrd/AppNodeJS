@@ -45,6 +45,9 @@ app.post('/login', user.login);
 app.get('/home/dashboard', user.dashboard);
 app.get('/home/logout', user.logout);
 app.get('/home/profile', user.profile);
+//app.get('/home/comparaison', user.comparaison);
+app.get('/home/statCompare',user.statCompare);
+app.get('/home/comparaison',user.comparaison);
 //app.get('/home/dashboard', fortniteUser.signGamertag);
 
 app.listen(8080);

@@ -1,0 +1,539 @@
+<%- include header %>
+    <link rel='stylesheet' href='' />
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Stats Solo Fortnite </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="column">
+                        <table class="table table-user-information">
+                            <tbody>
+                                <tr>
+                                    <td>Top 1:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p2.top1.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Top 10:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p2.top10.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Top 25:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p2.top25.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Matches:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p2.matches.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Time Played:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p2.minutesPlayed.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kills:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p2.kills.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kill per match:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p2.kpg.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kill per minutes:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p2.kpm.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kill/Death:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p2.kd.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Score:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p2.score.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Score per match:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p2.scorePerMatch.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Score per minutes:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p2.scorePerMin.displayValue%>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Stats Solo Fortnite </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="column">
+                        <table class="table table-user-information">
+                            <tbody>
+                                <tr>
+                                    <td>Top 1:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p2.top1.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Top 10:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p2.top10.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Top 25:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p2.top25.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Matches:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p2.matches.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Time Played:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p2.minutesPlayed.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kills:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p2.kills.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kill per match:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p2.kpg.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kill per minutes:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p2.kpm.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kill/Death:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p2.kd.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Score:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p2.score.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Score per match:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p2.scorePerMatch.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Score per minutes:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p2.scorePerMin.displayValue%>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title"> Stats Duo Fortnite </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="column">
+
+                        <table class="table table-user-information">
+                            <tbody>
+                                <tr>
+                                    <td>Top 1:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p10.top1.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Top 5:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p10.top5.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Top 12:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p10.top12.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Matches:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p10.matches.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Time Played:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p10.minutesPlayed.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kills:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p10.kills.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kill per match:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p10.kpg.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kill per minutes:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p10.kpm.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kill/Death:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p10.kd.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Score:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p10.score.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Score per match:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p10.scorePerMatch.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Score per minutes:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p10.scorePerMin.displayValue%>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title"> Stats Duo Fortnite </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="column">
+
+                        <table class="table table-user-information">
+                            <tbody>
+                                <tr>
+                                    <td>Top 1:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p10.top1.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Top 5:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p10.top5.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Top 12:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p10.top12.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Matches:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p10.matches.value%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Time Played:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p10.minutesPlayed.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kills:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p10.kills.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kill per match:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p10.kpg.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kill per minutes:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p10.kpm.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kill/Death:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p10.kd.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Score:</td>
+                                    <td>
+                                        <%=dataGamer.stats.p10.score.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Score per match:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p10.scorePerMatch.displayValue%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Score per minutes:</td>
+                                    <td>
+                                        <%=dataGamerFriend.stats.p10.scorePerMin.displayValue%>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-md-6">
+                    <div class="panel panel-info">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Stats Section Fortnite </h3>
+                      </div>
+                      <div class="panel-body">
+                        <div class="column">
+                          <table class="table table-user-information">
+                            <tbody>
+                              <tr>
+                                <td>Top 1:</td>
+                                <td>
+                                  <%=dataGamer.stats.p9.top1.value%>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Top 3:</td>
+                                <td>
+                                  <%=dataGamer.stats.p9.top3.value%>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Top 6:</td>
+                                <td>
+                                  <%=dataGamer.stats.p9.top6.value%>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Matches:</td>
+                                <td>
+                                  <%=dataGamer.stats.p9.matches.value%>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Time Played:</td>
+                                <td>
+                                  <%=dataGamer.stats.p9.minutesPlayed.displayValue%>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Kills:</td>
+                                <td>
+                                  <%=dataGamer.stats.p9.kills.displayValue%>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Kill per match:</td>
+                                <td>
+                                  <%=dataGamer.stats.p9.kpg.displayValue%>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Kill per minutes:</td>
+                                <td>
+                                  <%=dataGamer.stats.p9.kpm.displayValue%>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Kill/Death:</td>
+                                <td>
+                                  <%=dataGamer.stats.p9.kd.displayValue%>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Score:</td>
+                                <td>
+                                  <%=dataGamer.stats.p9.score.displayValue%>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Score per match:</td>
+                                <td>
+                                  <%=dataGamer.stats.p9.scorePerMatch.displayValue%>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Score per minutes:</td>
+                                <td>
+                                  <%=dataGamer.stats.p9.scorePerMin.displayValue%>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                        <div class="panel panel-info">
+                          <div class="panel-heading">
+                            <h3 class="panel-title"> Stats Section Fortnite </h3>
+                          </div>
+                          <div class="panel-body">
+                            <div class="column">
+                              <table class="table table-user-information">
+                                <tbody>
+                                  <tr>
+                                    <td>Top 1:</td>
+                                    <td>
+                                      <%=dataGamerFriend.stats.p9.top1.value%>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Top 3:</td>
+                                    <td>
+                                      <%=dataGamerFriend.stats.p9.top3.value%>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Top 6:</td>
+                                    <td>
+                                      <%=dataGamerFriend.stats.p9.top6.value%>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Matches:</td>
+                                    <td>
+                                      <%=dataGamerFriend.stats.p9.matches.value%>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Time Played:</td>
+                                    <td>
+                                      <%=dataGamerFriend.stats.p9.minutesPlayed.displayValue%>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Kills:</td>
+                                    <td>
+                                      <%=dataGamerFriend.stats.p9.kills.displayValue%>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Kill per match:</td>
+                                    <td>
+                                      <%=dataGamerFriend.stats.p9.kpg.displayValue%>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Kill per minutes:</td>
+                                    <td>
+                                      <%=dataGamer.stats.p9.kpm.displayValue%>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Kill/Death:</td>
+                                    <td>
+                                      <%=dataGamerFriend.stats.p9.kd.displayValue%>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Score:</td>
+                                    <td>
+                                      <%=dataGamerFriend.stats.p9.score.displayValue%>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Score per match:</td>
+                                    <td>
+                                      <%=dataGamerFriend.stats.p9.scorePerMatch.displayValue%>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Score per minutes:</td>
+                                    <td>
+                                      <%=dataGamerFriend.stats.p9.scorePerMin.displayValue%>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    </div>
+    <%- include footer %>
