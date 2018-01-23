@@ -23,6 +23,7 @@ global.db = connection;
 
 
 
+app.use('/static', express.static(__dirname + '/public'));
 app.set('port', process.env.PORT || 8080);
 app.set('views', `${__dirname}/views`);
 app.set('view engine', 'ejs');
@@ -46,7 +47,7 @@ app.get('/home/dashboard', user.dashboard);
 app.get('/home/logout', user.logout);
 app.get('/home/profile', user.profile);
 //app.get('/home/comparaison', user.comparaison);
-app.get('/home/statCompare',user.statCompare);
+app.post('/home/comparaison/statCompare',user.statCompare);
 app.get('/home/comparaison',user.comparaison);
 //app.get('/home/dashboard', fortniteUser.signGamertag);
 

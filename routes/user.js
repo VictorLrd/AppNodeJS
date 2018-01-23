@@ -129,11 +129,14 @@ exports.comparaison = function (req, res) {
 };
 
 exports.statCompare = function (req, res) {
-    var gamertagFriend = req.body.gamertag;
-    console.log(gamertagFriend);
     const gamertag = req.session.user.first_name;
     const platform = req.session.user.last_name;
     var userId = req.session.userId;
+    var post = req.body;
+    var name = post.gamertag;
+    var plat = post.card;
+    console.log(plat);
+    console.log(gamertag);
     var request = require("request");
     //console.log(gamertagFriend);
 
@@ -150,7 +153,7 @@ exports.statCompare = function (req, res) {
 
     var optionsFriend = {
         method: 'GET',
-        url: 'https://api.fortnitetracker.com/v1/profile/' + platform + '/' + 'Paghaz' + '',
+        url: 'https://api.fortnitetracker.com/v1/profile/' + platform + '/' + name + '',
         headers:
             {
                 'Postman-Token': 'e8c03bd2-9479-4bc8-1ea1-20de5981caf7',
@@ -170,7 +173,7 @@ exports.statCompare = function (req, res) {
             const dataGamer = JSON.parse(body);
             ////console.log(body);
            // console.log(body1);
-            res.render('statCompare.ejs', { dataGamer, dataGamerFriend});
+            res.render('statCompare.ejs', { dataGamer, dataGamerFriend, name , gamertag});
         });
     });
 

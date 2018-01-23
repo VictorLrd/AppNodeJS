@@ -5,79 +5,79 @@
         <div class="col-md-6">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Stats Solo Fortnite </h3>
+                    <h3 class="panel-title">Stats Solo Fortnite, <%=gamertag%></h3>
                 </div>
                 <div class="panel-body">
                     <div class="column">
                         <table class="table table-user-information">
                             <tbody>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p2.top1.value > dataGamerFriend.stats.p2.top1.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Top 1:</td>
                                     <td>
                                         <%=dataGamer.stats.p2.top1.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p2.top10.value > dataGamerFriend.stats.p2.top10.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Top 10:</td>
                                     <td>
                                         <%=dataGamer.stats.p2.top10.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p2.top25.value > dataGamerFriend.stats.p2.top25.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Top 25:</td>
                                     <td>
                                         <%=dataGamer.stats.p2.top25.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p2.matches.value > dataGamerFriend.stats.p2.matches.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Matches:</td>
                                     <td>
                                         <%=dataGamer.stats.p2.matches.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p2.minutesPlayed.value > dataGamerFriend.stats.p2.minutesPlayed.value ? 'green' : '#F6F6F6'%>">
                                     <td>Time Played:</td>
                                     <td>
                                         <%=dataGamer.stats.p2.minutesPlayed.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p2.kills.value > dataGamerFriend.stats.p2.kills.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kills:</td>
                                     <td>
                                         <%=dataGamer.stats.p2.kills.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr  style="background-color : <%=dataGamer.stats.p2.kpg.value > dataGamerFriend.stats.p2.kpg.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kill per match:</td>
                                     <td>
                                         <%=dataGamer.stats.p2.kpg.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p2.kpm.value > dataGamerFriend.stats.p2.kpm.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kill per minutes:</td>
                                     <td>
                                         <%=dataGamer.stats.p2.kpm.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p2.kd.value > dataGamerFriend.stats.p2.kd.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kill/Death:</td>
                                     <td>
                                         <%=dataGamer.stats.p2.kd.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p2.score.value > dataGamerFriend.stats.p2.score.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Score:</td>
                                     <td>
                                         <%=dataGamer.stats.p2.score.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p2.scorePerMatch.value > dataGamerFriend.stats.p2.scorePerMatch.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Score per match:</td>
                                     <td>
                                         <%=dataGamer.stats.p2.scorePerMatch.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr  style="background-color : <%=dataGamer.stats.p2.scorePerMin.value > dataGamerFriend.stats.p2.scorePerMin.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Score per minutes:</td>
                                     <td>
                                         <%=dataGamer.stats.p2.scorePerMin.displayValue%>
@@ -93,79 +93,79 @@
         <div class="col-md-6">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Stats Solo Fortnite </h3>
+                    <h3 class="panel-title">Stats Solo Fortnite, <%=name%> </h3>
                 </div>
                 <div class="panel-body">
                     <div class="column">
                         <table class="table table-user-information">
                             <tbody>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p2.top1.value > dataGamer.stats.p2.top1.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Top 1:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p2.top1.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p2.top10.value > dataGamer.stats.p2.top10.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Top 10:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p2.top10.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p2.top25.value > dataGamer.stats.p2.top25.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Top 25:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p2.top25.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr  style="background-color : <%=dataGamerFriend.stats.p2.matches.value > dataGamer.stats.p2.matches.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Matches:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p2.matches.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr  style="background-color : <%=dataGamerFriend.stats.p2.minutesPlayed.value > dataGamer.stats.p2.minutesPlayed.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Time Played:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p2.minutesPlayed.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr  style="background-color : <%=dataGamerFriend.stats.p2.kills.value > dataGamer.stats.p2.kills.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kills:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p2.kills.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p2.kpg.value > dataGamer.stats.p2.kpg.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kill per match:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p2.kpg.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr  style="background-color : <%=dataGamerFriend.stats.p2.kpm.value > dataGamer.stats.p2.kpm.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kill per minutes:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p2.kpm.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr  style="background-color : <%=dataGamerFriend.stats.p2.kd.value > dataGamer.stats.p2.kd.value ? '#d9c400' : ''%>">
                                     <td>Kill/Death:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p2.kd.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr  style="background-color : <%=dataGamerFriend.stats.p2.score.value > dataGamer.stats.p2.score.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Score:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p2.score.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p2.scorePerMatch.value > dataGamer.stats.p2.scorePerMatch.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Score per match:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p2.scorePerMatch.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p2.scorePerMin.value > dataGamer.stats.p2.scorePerMin.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Score per minutes:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p2.scorePerMin.displayValue%>
@@ -185,80 +185,80 @@
         <div class="col-md-6">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title"> Stats Duo Fortnite </h3>
+                    <h3 class="panel-title"> Stats Duo Fortnite, <%=gamertag%> </h3>
                 </div>
                 <div class="panel-body">
                     <div class="column">
 
                         <table class="table table-user-information">
                             <tbody>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p10.top1.value > dataGamerFriend.stats.p10.top1.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Top 1:</td>
                                     <td>
                                         <%=dataGamer.stats.p10.top1.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p10.top5.value > dataGamerFriend.stats.p10.top5.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Top 5:</td>
                                     <td>
                                         <%=dataGamer.stats.p10.top5.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p10.top12.value > dataGamerFriend.stats.p10.top12.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Top 12:</td>
                                     <td>
                                         <%=dataGamer.stats.p10.top12.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p10.matches.value > dataGamerFriend.stats.p10.matches.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Matches:</td>
                                     <td>
                                         <%=dataGamer.stats.p10.matches.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p10.minutesPlayed.value > dataGamerFriend.stats.p10.minutesPlayed.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Time Played:</td>
                                     <td>
                                         <%=dataGamer.stats.p10.minutesPlayed.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p10.kills.value > dataGamerFriend.stats.p10.kills.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kills:</td>
                                     <td>
                                         <%=dataGamer.stats.p10.kills.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p10.kpg.value > dataGamerFriend.stats.p10.kpg.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kill per match:</td>
                                     <td>
                                         <%=dataGamer.stats.p10.kpg.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p10.kpm.value > dataGamerFriend.stats.p10.kpm.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kill per minutes:</td>
                                     <td>
                                         <%=dataGamer.stats.p10.kpm.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p10.kd.value > dataGamerFriend.stats.p10.kd.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kill/Death:</td>
                                     <td>
                                         <%=dataGamer.stats.p10.kd.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p10.score.value > dataGamerFriend.stats.p10.score.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Score:</td>
                                     <td>
                                         <%=dataGamer.stats.p10.score.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p10.scorePerMatch.value > dataGamerFriend.stats.p10.scorePerMatch.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Score per match:</td>
                                     <td>
                                         <%=dataGamer.stats.p10.scorePerMatch.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamer.stats.p10.scorePerMin.value > dataGamerFriend.stats.p10.scorePerMin.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Score per minutes:</td>
                                     <td>
                                         <%=dataGamer.stats.p10.scorePerMin.displayValue%>
@@ -274,80 +274,80 @@
         <div class="col-md-6">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title"> Stats Duo Fortnite </h3>
+                    <h3 class="panel-title"> Stats Duo Fortnite, <%=name%> </h3>
                 </div>
                 <div class="panel-body">
                     <div class="column">
 
                         <table class="table table-user-information">
                             <tbody>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p10.top1.value > dataGamer.stats.p10.top1.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Top 1:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p10.top1.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p10.top5.value > dataGamer.stats.p10.top5.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Top 5:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p10.top5.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p10.top12.value > dataGamer.stats.p10.top12.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Top 12:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p10.top12.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p10.matches.value > dataGamer.stats.p10.matches.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Matches:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p10.matches.value%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p10.minutesPlayed.value > dataGamer.stats.p10.minutesPlayed.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Time Played:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p10.minutesPlayed.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p10.kills.value > dataGamer.stats.p10.kills.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kills:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p10.kills.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p10.kpg.value > dataGamer.stats.p10.kpg.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kill per match:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p10.kpg.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p10.kpm.value > dataGamer.stats.p10.kpm.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kill per minutes:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p10.kpm.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p10.kd.value > dataGamer.stats.p10.kd.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kill/Death:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p10.kd.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p10.score.value > dataGamer.stats.p10.score.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Score:</td>
                                     <td>
                                         <%=dataGamer.stats.p10.score.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p10.scorePerMatch.value > dataGamer.stats.p10.scorePerMatch.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Score per match:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p10.scorePerMatch.displayValue%>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="background-color : <%=dataGamerFriend.stats.p10.scorePerMin.value > dataGamer.stats.p10.scorePerMin.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Score per minutes:</td>
                                     <td>
                                         <%=dataGamerFriend.stats.p10.scorePerMin.displayValue%>
@@ -364,79 +364,79 @@
             <div class="col-md-6">
                     <div class="panel panel-info">
                       <div class="panel-heading">
-                        <h3 class="panel-title">Stats Section Fortnite </h3>
+                        <h3 class="panel-title">Stats Section Fortnite, <%=gamertag%> </h3>
                       </div>
                       <div class="panel-body">
                         <div class="column">
                           <table class="table table-user-information">
                             <tbody>
-                              <tr>
+                              <tr style="background-color : <%=dataGamer.stats.p9.top1.value > dataGamerFriend.stats.p9.top1.value ? '#d9c400' : '#F6F6F6'%>">
                                 <td>Top 1:</td>
                                 <td>
                                   <%=dataGamer.stats.p9.top1.value%>
                                 </td>
                               </tr>
-                              <tr>
+                              <tr style="background-color : <%=dataGamer.stats.p9.top3.value > dataGamerFriend.stats.p9.top3.value ? '#d9c400' : '#F6F6F6'%>">
                                 <td>Top 3:</td>
                                 <td>
                                   <%=dataGamer.stats.p9.top3.value%>
                                 </td>
                               </tr>
-                              <tr>
+                              <tr style="background-color : <%=dataGamer.stats.p9.top6.value > dataGamerFriend.stats.p9.top6.value ? '#d9c400' : '#F6F6F6'%>">
                                 <td>Top 6:</td>
                                 <td>
                                   <%=dataGamer.stats.p9.top6.value%>
                                 </td>
                               </tr>
-                              <tr>
+                              <tr style="background-color : <%=dataGamer.stats.p9.matches.value > dataGamerFriend.stats.p9.matches.value ? '#d9c400' : '#F6F6F6'%>">
                                 <td>Matches:</td>
                                 <td>
                                   <%=dataGamer.stats.p9.matches.value%>
                                 </td>
                               </tr>
-                              <tr>
+                              <tr style="background-color : <%=dataGamer.stats.p9.minutesPlayed.value > dataGamerFriend.stats.p9.minutesPlayed.value ? '#d9c400' : '#F6F6F6'%>">
                                 <td>Time Played:</td>
                                 <td>
                                   <%=dataGamer.stats.p9.minutesPlayed.displayValue%>
                                 </td>
                               </tr>
-                              <tr>
+                              <tr style="background-color : <%=dataGamer.stats.p9.kills.value > dataGamerFriend.stats.p9.kills.value ? '#d9c400' : '#F6F6F6'%>">
                                 <td>Kills:</td>
                                 <td>
                                   <%=dataGamer.stats.p9.kills.displayValue%>
                                 </td>
                               </tr>
-                              <tr>
+                              <tr style="background-color : <%=dataGamer.stats.p9.kpg.value > dataGamerFriend.stats.p9.kpg.value ? '#d9c400' : '#F6F6F6'%>">
                                 <td>Kill per match:</td>
                                 <td>
                                   <%=dataGamer.stats.p9.kpg.displayValue%>
                                 </td>
                               </tr>
-                              <tr>
+                              <tr style="background-color : <%=dataGamer.stats.p9.kpm.value > dataGamerFriend.stats.p9.kpm.value ? '#d9c400' : '#F6F6F6'%>">
                                 <td>Kill per minutes:</td>
                                 <td>
                                   <%=dataGamer.stats.p9.kpm.displayValue%>
                                 </td>
                               </tr>
-                              <tr>
+                              <tr style="background-color : <%=dataGamer.stats.p9.kd.value > dataGamerFriend.stats.p9.kd.value ? '#d9c400' : '#F6F6F6'%>">
                                 <td>Kill/Death:</td>
                                 <td>
                                   <%=dataGamer.stats.p9.kd.displayValue%>
                                 </td>
                               </tr>
-                              <tr>
+                              <tr style="background-color : <%=dataGamer.stats.p9.score.value > dataGamerFriend.stats.p9.score.value ? '#d9c400' : '#F6F6F6'%>">
                                 <td>Score:</td>
                                 <td>
                                   <%=dataGamer.stats.p9.score.displayValue%>
                                 </td>
                               </tr>
-                              <tr>
+                              <tr style="background-color : <%=dataGamer.stats.p9.scorePerMatch.value > dataGamerFriend.stats.p9.scorePerMatch.value ? '#d9c400' : '#F6F6F6'%>">
                                 <td>Score per match:</td>
                                 <td>
                                   <%=dataGamer.stats.p9.scorePerMatch.displayValue%>
                                 </td>
                               </tr>
-                              <tr>
+                              <tr style="background-color : <%=dataGamer.stats.p9.scorePerMin.value > dataGamerFriend.stats.p9.scorePerMin.value ? '#d9c400' : '#F6F6F6'%>">
                                 <td>Score per minutes:</td>
                                 <td>
                                   <%=dataGamer.stats.p9.scorePerMin.displayValue%>
@@ -451,79 +451,79 @@
                   <div class="col-md-6">
                         <div class="panel panel-info">
                           <div class="panel-heading">
-                            <h3 class="panel-title"> Stats Section Fortnite </h3>
+                            <h3 class="panel-title"> Stats Section Fortnite, <%=name%> </h3>
                           </div>
                           <div class="panel-body">
                             <div class="column">
                               <table class="table table-user-information">
                                 <tbody>
-                                  <tr>
+                                  <tr style="background-color : <%=dataGamerFriend.stats.p9.top1.value > dataGamer.stats.p9.top1.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Top 1:</td>
                                     <td>
                                       <%=dataGamerFriend.stats.p9.top1.value%>
                                     </td>
                                   </tr>
-                                  <tr>
+                                  <tr style="background-color : <%=dataGamerFriend.stats.p9.top3.value > dataGamer.stats.p9.top3.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Top 3:</td>
                                     <td>
                                       <%=dataGamerFriend.stats.p9.top3.value%>
                                     </td>
                                   </tr>
-                                  <tr>
+                                  <tr style="background-color : <%=dataGamerFriend.stats.p9.top6.value > dataGamer.stats.p9.top6.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Top 6:</td>
                                     <td>
                                       <%=dataGamerFriend.stats.p9.top6.value%>
                                     </td>
                                   </tr>
-                                  <tr>
+                                  <tr style="background-color : <%=dataGamerFriend.stats.p9.matches.value > dataGamer.stats.p9.matches.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Matches:</td>
                                     <td>
                                       <%=dataGamerFriend.stats.p9.matches.value%>
                                     </td>
                                   </tr>
-                                  <tr>
+                                  <tr style="background-color : <%=dataGamerFriend.stats.p9.minutesPlayed.value > dataGamer.stats.p9.minutesPlayed.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Time Played:</td>
                                     <td>
                                       <%=dataGamerFriend.stats.p9.minutesPlayed.displayValue%>
                                     </td>
                                   </tr>
-                                  <tr>
+                                  <tr style="background-color : <%=dataGamerFriend.stats.p9.kills.value > dataGamer.stats.p9.kills.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kills:</td>
                                     <td>
                                       <%=dataGamerFriend.stats.p9.kills.displayValue%>
                                     </td>
                                   </tr>
-                                  <tr>
+                                  <tr style="background-color : <%=dataGamerFriend.stats.p9.kpg.value > dataGamer.stats.p9.kpg.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kill per match:</td>
                                     <td>
                                       <%=dataGamerFriend.stats.p9.kpg.displayValue%>
                                     </td>
                                   </tr>
-                                  <tr>
+                                  <tr style="background-color : <%=dataGamerFriend.stats.p9.kpm.value > dataGamer.stats.p9.kpm.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kill per minutes:</td>
                                     <td>
                                       <%=dataGamer.stats.p9.kpm.displayValue%>
                                     </td>
                                   </tr>
-                                  <tr>
+                                  <tr style="background-color : <%=dataGamerFriend.stats.p9.kd.value > dataGamer.stats.p9.kd.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Kill/Death:</td>
                                     <td>
                                       <%=dataGamerFriend.stats.p9.kd.displayValue%>
                                     </td>
                                   </tr>
-                                  <tr>
+                                  <tr style="background-color : <%=dataGamerFriend.stats.p9.score.value > dataGamer.stats.p9.score.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Score:</td>
                                     <td>
                                       <%=dataGamerFriend.stats.p9.score.displayValue%>
                                     </td>
                                   </tr>
-                                  <tr>
+                                  <tr style="background-color : <%=dataGamerFriend.stats.p9.scorePerMatch.value > dataGamer.stats.p9.scorePerMatch.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Score per match:</td>
                                     <td>
                                       <%=dataGamerFriend.stats.p9.scorePerMatch.displayValue%>
                                     </td>
                                   </tr>
-                                  <tr>
+                                  <tr style="background-color : <%=dataGamerFriend.stats.p9.scorePerMin.value > dataGamer.stats.p9.scorePerMin.value ? '#d9c400' : '#F6F6F6'%>">
                                     <td>Score per minutes:</td>
                                     <td>
                                       <%=dataGamerFriend.stats.p9.scorePerMin.displayValue%>
