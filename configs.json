@@ -1,0 +1,9 @@
+{
+    "apiKey": "ff3f7f16-c33f-4281-8c39-6f4a0c705ac2",
+    "mysql": {
+      "host": "localhost",
+      "user": "root",
+      "password": "root",
+      "database": "nodejs"
+    }
+  }

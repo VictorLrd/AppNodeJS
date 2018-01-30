@@ -10,11 +10,13 @@ const app = express();
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 
+var config = require('config.json')('configs.json');
+
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database: 'nodejs',
+  host: config.mysql.host,
+  user: config.mysql.user,
+  password: config.mysql.password,
+  database: config.mysql.database,
 });
 
 connection.connect();
@@ -46,9 +48,7 @@ app.post('/login', user.login);
 app.get('/home/dashboard', user.dashboard);
 app.get('/home/logout', user.logout);
 app.get('/home/profile', user.profile);
-//app.get('/home/comparaison', user.comparaison);
 app.post('/home/comparaison/statCompare',user.statCompare);
 app.get('/home/comparaison',user.comparaison);
-//app.get('/home/dashboard', fortniteUser.signGamertag);
 
 app.listen(8080);
